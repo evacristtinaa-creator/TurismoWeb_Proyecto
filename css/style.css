@@ -125,6 +125,10 @@
 
 
 /*** Topbar Start ***/
+.topper-custom {
+    background-color: #F49399; 
+}
+
 .fixed-top .container {
     transition: 0.5s;
 }
