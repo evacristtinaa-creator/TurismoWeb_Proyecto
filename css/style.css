@@ -430,7 +430,7 @@ button:active,
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgb(45, 50, 80)), url(../img/breadcrumb-bg.jpg);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgb(45, 50, 80)), url(../img/Banner.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
