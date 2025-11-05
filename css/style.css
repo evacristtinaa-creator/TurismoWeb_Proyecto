@@ -926,7 +926,7 @@ button:active,
 
 /*** Tour Booking Start ***/
 .booking {
-    background: linear-gradient(rgba(106, 109, 158, 0.6), rgba(106, 109, 158, 0.6)), url(../img/tour-booking-bg.jpg);
+    background: linear-gradient(rgba(106, 109, 158, 0.6), rgba(106, 109, 158, 0.6)), url(../img/Banner.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1226,7 +1226,7 @@ button:active,
 
 /*** Subscribe Start ***/
 .subscribe {
-    background: linear-gradient(rgba(106, 109, 158, 0.6), rgba(106, 109, 158, 0.6)), url(../img/subscribe-img.jpg);
+    background: linear-gradient(rgba(106, 109, 158, 0.6), rgba(106, 109, 158, 0.6)), url(../img/Banner.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
