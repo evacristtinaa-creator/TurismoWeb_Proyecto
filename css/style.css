@@ -2,7 +2,7 @@
     background-color: #F25C5C; 
 }
 .color-estrellas {
-    color: #F25C5C;
+    color: #FFB17A;
 }
 .color-blog {
     color: #F25C5C; 
@@ -10,7 +10,11 @@
 h1.m-0 {
     font-family: 'Roboto', sans-serif;
 }
-
+.color-borde {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #F25C5C !important;
+}
 
 /*** Spinner Start ***/
 /*** Spinner ***/
