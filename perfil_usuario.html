@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil de Usuario - Aventurística</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+/*DISEÑO DE PERFIL DE USUARIO*/
+* { margin:0; padding:0; box-sizing:border-box; font-family: "Poppins", sans-serif; }
+:root { --main-color: #F25C5C; }
+body { background:#f4f5f7; color:#333; }
+
+/* Header */
+header{
+  background:#fff; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ddd; position:sticky; top:0; z-index:100;
+}
+.header-left{ display:flex; align-items:center; gap:20px; }
+h1{ font-size:20px; font-weight:400; color:#000; display:flex; align-items:center; gap:10px; }
+header h1 i{ color:var(--main-color); }
+.menu{ display:flex; gap:25px; }
+.menu a{ text-decoration:none; color:#8a8888; font-weight:500; transition:0.3s; font-size:15px; }
+.menu a:hover{ color:var(--main-color); }
+
+/* Hamburger */
+.hamburger{ display:none; flex-direction:column; gap:4px; cursor:pointer; }
+.hamburger div{ width:25px; height:3px; background:#333; border-radius:2px; }
+
+/* Icons */
+.icons{ display:flex; align-items:center; gap:18px; position:relative; }
+.logout-btn{ background:#F25C5C; color:#fff; border:none; border-radius:10px; padding:8px 16px; font-size:13px; font-weight:500; cursor:pointer; transition:0.3s; }
+.logout-btn:hover{ transform:scale(1.05); }
+
+.notification, .reservas-btn{ display:flex; align-items:center; justify-content:center; width:35px; height:35px; border-radius:50%; cursor:pointer; transition:all 0.3s ease; position:relative; background:#eee; }
+.notification i, .reservas-btn i{ color:#333; font-size:18px; }
+
+.color-btn{ width:35px; height:35px; border-radius:50%; cursor:pointer; background:linear-gradient(135deg,#f4027b,#e4b806); background-size:300% 300%; animation:colorShift 5s infinite alternate; transition: transform 0.3s ease, box-shadow 0.3s; }
+.color-btn:hover{ transform:rotate(25deg) scale(1.15); box-shadow:0 0 8px var(--main-color); }
+@keyframes colorShift{ 0%{background-position:0% 50%;}100%{background-position:100% 50%;} }
+
+/* Cover y Perfil */
+.cover-photo{ width:100%; height:300px; background:url('perfil4.jpg') center/cover no-repeat; }
+.profile-info{ background:#fff; padding:80px 80px 30px; display:flex; align-items:center; gap:60px; box-shadow:0 3px 8px rgba(0,0,0,0.05); margin-top:-10px; border-radius:20px; position:relative; }
+.profile-info img{ width:150px; height:150px; border-radius:50%; object-fit:cover; border:5px solid #0c42c1; position:absolute; top:-75px; left:60px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+.profile-buttons{ margin-top:15px; display:flex; gap:15px; }
+.btn-green{ background-color:#31d436; color:#fff; border:none; border-radius:50px; font-size:14px; font-weight:500; padding:8px 20px; cursor:pointer; transition:0.3s ease; display:flex; align-items:center; gap:8px; }
+.btn-green:hover{ background-color:#28b42e; transform:scale(1.05); }
+.btn-outline{ display:flex; overflow:hidden; border:2px solid #fb0064; border-radius:50px; font-size:14px; font-weight:500; color:#fb0064; background:#fff; transition:all 0.3s ease; height:38px; align-items:center; padding:0 10px; }
+.btn-outline input{ border:none; outline:none; font-size:14px; color:#fb0064; background:transparent; text-align:center; cursor:pointer; width:110px; }
+.travel-desc{ margin-top:20px; text-align:justify; line-height:1.6; font-size:15px; color:#555; max-width:600px; }
+
+/* Dropdowns */
+.dropdown{ position:absolute; top:50px; right:0; width:300px; max-height:400px; background:#fff; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.15); overflow-y:auto; display:none; z-index:999; }
+.dropdown-item{ display:flex; align-items:flex-start; gap:12px; padding:10px 15px; border-bottom:1px solid #eee; }
+.dropdown-item:last-child{ border-bottom:none; }
+.dropdown-item i{ color:var(--main-color); font-size:18px; min-width:25px; }
+.dropdown-item .content{ display:flex; flex-direction:column; }
+.dropdown-item .content h4{ font-size:14px; margin-bottom:2px; color:#333; }
+.dropdown-item .content p{ font-size:13px; color:#555; }
+.dropdown-item .content .time{ font-size:11px; color:#aaa; margin-top:2px; }
+
+/* Responsive */
+@media (max-width:768px){
+  header{ flex-direction:row; justify-content:space-between; align-items:center; padding:15px; }
+  .hamburger{ display:flex; }
+  .menu{ display:none; flex-direction:column; gap:10px; width:100%; margin-top:10px; position:absolute; top:60px; left:0; background:#fff; padding:15px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+  .menu.show{ display:flex; }
+  .color-btn{ display:none; }
+  .profile-info{ flex-direction:column; align-items:center; text-align:center; padding:60px 20px; margin:-100px 15px 0; }
+  .profile-info img{ position:static; width:120px; height:120px; margin-bottom:10px; }
+}
+</style>
+</head>
+
+
+<body>
+<header>
+  <div class="header-left">
+    <div class="hamburger" id="hamburger">
+      <div></div><div></div><div></div>
+    </div>
+    <h1><i class="fa-solid fa-location-dot"></i> Aventurística</h1>
+    <nav class="menu">
+      <a href="#">Contáctanos</a>
+      <a href="#">Guías</a>
+      <a href="#">Servicios</a>
+      <a href="#">APP</a>
+    </nav>
+  </div>
+
+  <div class="icons">
+    <button class="logout-btn">Cerrar sesión</button>
+    <div class="notification" id="notiBtn"><i class="fa-regular fa-bell"></i>
+      <div class="dropdown" id="notiDropdown"></div>
+    </div>
+    <div class="reservas-btn" id="resBtn"><i class="fa-solid fa-calendar-check"></i>
+      <div class="dropdown" id="resDropdown"></div>
+    </div>
+    <div class="color-btn" title="Cambiar color del tema"></div>
+  </div>
+</header>
+
+<section class="cover-photo"></section>
+
+<section class="profile-info">
+  <img src="perfil.jpg" alt="Foto de perfil">
+  <div class="profile-details">
+    <h3>Olivia Rhye</h3>
+    <p>Viajera apasionada y exploradora de culturas</p>
+    <p><i class="fa-solid fa-location-dot"></i> Lima, Perú</p>
+
+    <div class="profile-buttons">
+      <button class="btn-green" id="ticketsBtn">
+        <i class="fa-solid fa-ticket"></i> 
+        <span id="ticketCount">2000</span> Tickets disponibles
+      </button>
+
+      <div class="btn-outline">
+        <span><i class="fa-regular fa-calendar-days"></i></span>
+        <input type="date" id="fecha">
+        <span><i class="fa-regular fa-clock"></i></span>
+        <input type="time" id="hora">
+      </div>
+    </div>
+
+    <p class="travel-desc">
+      Viajar nunca fue tan fácil. Reserva tu próxima aventura con solo unos clics y deja que nosotros nos encarguemos del resto.
+    </p>
+  </div>
+</section>
+
+<script>
+// Tickets
+let tickets = 2000;
+const btn = document.getElementById("ticketsBtn");
+const ticketCount = document.getElementById("ticketCount");
+btn.addEventListener("click",()=>{
+  if(tickets>0){tickets--; ticketCount.textContent=tickets;}
+  else{btn.textContent="Agotado!";}
+});
+
+// Dropdowns
+const notiBtn=document.getElementById("notiBtn");
+const notiDropdown=document.getElementById("notiDropdown");
+const resBtn=document.getElementById("resBtn");
+const resDropdown=document.getElementById("resDropdown");
+
+const notificaciones=[
+  {icon:"fa-solid fa-bell",title:"Alerta de viaje",text:"Tu reserva para Cusco fue confirmada.",time:"Hace 1h"},
+  {icon:"fa-solid fa-comment",title:"Mensaje guía",text:"El guía te ha enviado detalles del tour.",time:"Hace 2h"},
+  {icon:"fa-solid fa-bell",title:"Oferta especial",text:"Descuento del 20% en tu próxima aventura.",time:"Ayer"}
+];
+const reservas=[
+  {icon:"fa-solid fa-calendar-check",title:"Reserva confirmada",text:"Tu tour a Machu Picchu está confirmado.",time:"Hoy 10:00"},
+  {icon:"fa-solid fa-calendar-check",title:"Reserva pendiente",text:"Tour a Lago Titicaca pendiente de pago.",time:"Mañana 09:00"}
+];
+
+function renderDropdown(arr,dropdown){
+  dropdown.innerHTML="";
+  arr.forEach(msg=>{
+    const div=document.createElement("div");
+    div.className="dropdown-item";
+    div.innerHTML=`<i class="${msg.icon}"></i><div class="content"><h4>${msg.title}</h4><p>${msg.text}</p><div class="time">${msg.time}</div></div>`;
+    dropdown.appendChild(div);
+  });
+}
+
+notiBtn.addEventListener("click",e=>{
+  e.stopPropagation();
+  notiDropdown.style.display=notiDropdown.style.display==="block"?"none":"block";
+  renderDropdown(notificaciones,notiDropdown);
+});
+
+resBtn.addEventListener("click",e=>{
+  e.stopPropagation();
+  resDropdown.style.display=resDropdown.style.display==="block"?"none":"block";
+  renderDropdown(reservas,resDropdown);
+});
+
+document.addEventListener("click",()=>{notiDropdown.style.display="none"; resDropdown.style.display="none";});
+
+// Logout
+const logoutBtn = document.querySelector(".logout-btn");
+logoutBtn.addEventListener("click", () => {
+  if(confirm("¿Deseas cerrar sesión?")){
+    window.location.href = "login.html";
+  }
+});
+
+// Hamburger menu
+const hamburger=document.getElementById("hamburger");
+const menu=document.querySelector(".menu");
+hamburger.addEventListener("click",(e)=>{
+  e.stopPropagation();
+  menu.classList.toggle("show");
+});
+document.addEventListener("click",()=>{menu.classList.remove("show");});
+</script>
+
+</body>
+</html>

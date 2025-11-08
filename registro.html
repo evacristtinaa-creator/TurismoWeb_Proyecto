@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro Elegante</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/*DISEÑO DE FORMULARIO*/
+* { box-sizing:border-box; margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { display:flex; justify-content:center; align-items:center; min-height:100vh; background: #f5f5f5; }
+
+.container {
+    display:flex;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    overflow:hidden;
+    max-width:900px;
+    width:100%;
+}
+
+/* Imagen izquierda */
+.form-image {
+    flex:1;
+    background: url('registro.jpg') center/cover no-repeat;
+    min-height:500px;
+}
+
+/* Formulario derecha */
+.form-container {
+    flex:1;
+    padding:50px 40px;
+}
+
+h2 {
+    text-align:center;
+    margin-bottom:40px;
+    color:#000000;
+    font-size:30px;
+    letter-spacing:1px;
+}
+
+.form-grid {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:25px;
+}
+
+@media(max-width:900px){ 
+    .container { flex-direction:column; } 
+    .form-image { min-height:250px; } 
+    .form-grid { grid-template-columns:1fr; } 
+}
+
+/* Inputs y selects estilo login */
+.input-group { position:relative; }
+.input-group input, .input-group select {
+    width:100%;
+    padding:15px 45px 15px 15px;
+    border-radius:15px;
+    border:1px solid #ccc;
+    outline:none;
+    font-size:15px;
+    background:#f9f9f9;
+    transition: all 0.3s ease;
+}
+.input-group input:focus, .input-group select:focus {
+    border-color:#F25C5C;
+    background:#fff;
+    box-shadow:0 0 10px rgba(242,92,92,0.2);
+}
+.input-group i {
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#aaa;
+    transition: all 0.3s ease;
+    font-size:16px;
+}
+.input-group input:focus + i, .input-group select:focus + i {
+    color:#F25C5C;
+    transform:scale(1.1);
+}
+
+/* Teléfono con codigo de pais */
+.phone-row { display:flex; gap:10px; }
+.phone-row select { width:30%; border-radius:12px; border:1px solid #ccc; background:#f9f9f9; font-size:16px; padding:15px 10px; appearance:none; }
+.phone-row input { flex:1; border-radius:12px; border:1px solid #ccc; padding:15px; font-size:16px; background:#f9f9f9; transition: all 0.3s ease; }
+.phone-row input:focus { border-color:#F25C5C; background:#fff; box-shadow:0 0 10px rgba(242,92,92,0.2); }
+
+button {
+    width:100%;
+    padding:18px;
+    margin-top:25px;
+    border:none;
+    border-radius:20px;
+    background: linear-gradient(135deg,#F25C5C,#F25C5C);
+    color:#ffffff;
+    font-size:17px;
+    font-weight:500;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+button:hover { transform:translateY(-2px) scale(1.02); background: linear-gradient(135deg,#349393,#84b7ce); }
+
+.form-footer {
+    text-align:center;
+    margin-top:25px;
+    font-size:15px;
+    color:#555;
+}
+.form-footer a { color:#6c63ff; text-decoration:none; font-weight:600; transition:0.3s; }
+.form-footer a:hover { color:#3f36a0; }
+
+select { background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><polygon points="0,0 12,0 6,6" fill="%23888"/></svg>'); background-repeat:no-repeat; background-position:right 10px center; background-size:12px; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- IMAGEN IZQUIERDA -->
+    <div class="form-image"></div>
+
+    <!-- FORMULARIO DERECHA -->
+    <div class="form-container">
+        <h2>Bienvenido!</h2>
+        <form action="procesar_registro.php" method="POST">
+            <div class="form-grid">
+                <div class="input-group">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="apellidos" placeholder="Apellidos" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="input-group">
+                    <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="direccion" placeholder="Dirección" required>
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+
+                <!-- Teléfono con país -->
+                <div class="input-group phone-row" style="grid-column: span 2;">
+                    <select name="pais" id="pais" required>
+                        <option value="" disabled selected>País</option>
+                        <option value="Peru" data-codigo="+51">Perú</option>
+                        <option value="Mexico" data-codigo="+52">México</option>
+                        <option value="Argentina" data-codigo="+54">Argentina</option>
+                        <option value="Chile" data-codigo="+56">Chile</option>
+                        <option value="Colombia" data-codigo="+57">Colombia</option>
+                        <option value="España" data-codigo="+34">España</option>
+                        <option value="Otro" data-codigo="+0">Otro</option>
+                    </select>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+                    <i class="fas fa-phone"></i>
+                </div>
+            </div>
+
+            <button type="submit">Registrarse</button>
+
+            <div class="form-footer">
+                ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const paisSelect = document.getElementById('pais');
+    const telefonoInput = document.getElementById('telefono');
+
+    paisSelect.addEventListener('change', () => {
+        const codigo = paisSelect.options[paisSelect.selectedIndex].getAttribute('data-codigo');
+        telefonoInput.value = codigo;
+        telefonoInput.focus();
+    });
+</script>
+
+</body>
+</html>
