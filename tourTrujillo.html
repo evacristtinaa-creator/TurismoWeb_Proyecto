@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Travela - Tourism Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topper-custom px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/share/1AHtaxVvJP/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.tiktok.com/@aventuristica7?_r=1&_t=ZS-91A2g56J49X"><i class="fab fa-tiktok fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/aven_turistica?igsh=MW53NWgzZWwxZzN1dA=="><i class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a href="registro.html"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Registro</small></a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> Mi Panel de Control</small></a>
+                            <div class="dropdown-menu rounded">
+                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2" ></i> Mi Perfil</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Cerrar Sesión</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Aventuristica</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 navbar-top">
+                        <a href="index.html" class="nav-item nav-link">Hogar</a>
+                        <a href="about.html" class="nav-item nav-link">Acerca de</a>
+                        <a href="services.html" class="nav-item nav-link">Servicios</a>
+                        <a href="packages.html" class="nav-item nav-link">Paquetes</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Páginas</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="destination.html" class="dropdown-item">Destino</a>
+                                <a href="tour.html" class="dropdown-item">Tour de Exploracion</a>
+                                <a href="gallery.html" class="dropdown-item">Nuestra Galeria</a>
+                                <a href="guides.html" class="dropdown-item">Guías de Viaje</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonios</a>
+                                <a href="404.html" class="dropdown-item">Restaurante</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                    </div>
+                    <a href="/booking.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Reservar Ahora</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">404 Page</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-white">404 Page</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <section class="tour-section container my-5">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 style="color:#F25C5C;">Sobre el Tour</h2>
+      <p>Descubre Trujillo, ciudad colonial y cuna de importantes civilizaciones preincaicas. Este tour combina historia, arqueología y costa: visitarás la ciudadela de adobe más grande de América, templos mochica, casonas coloniales, playas con tradición pesquera y un complejo arqueológico donde se halló a la Señora de Cao.</p>
+
+      <!-- DETALLES DE LA EXPERIENCIA CON ICONOS GRANDES -->
+      <h3 style="color:#F25C5C;" class="mt-4 mb-3">Detalles de la experiencia</h3>
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-4">
+          <div class="d-flex align-items-center border p-3 rounded shadow-sm">
+            <i class="fas fa-clock fa-2x me-3" style="color:#F25C5C;"></i>
+            <div><strong>48 horas</strong><div>Duración</div></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="d-flex align-items-center border p-3 rounded shadow-sm">
+            <i class="fas fa-ban fa-2x me-3" style="color:#F25C5C;"></i>
+            <div><strong>Cancelación</strong><div>Gratis 48h antes</div></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="d-flex align-items-center border p-3 rounded shadow-sm">
+            <i class="fas fa-calendar-alt fa-2x me-3" style="color:#F25C5C;"></i>
+            <div><strong>Reservar</strong><div>24h antes del viaje</div></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="d-flex align-items-center border p-3 rounded shadow-sm">
+            <i class="fas fa-sun fa-2x me-3" style="color:#F25C5C;"></i>
+            <div><strong>Salidas</strong><div>Viernes y Sábados (FEB – DIC)</div></div>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="color:#F25C5C;">Itinerario Detallado</h2>
+<ul>
+  <li><strong>Día 1:</strong> Llegada a Trujillo y recorrido por el Centro Histórico, incluyendo la Plaza de Armas y las casonas coloniales.</li>
+  <li><strong>Día 2:</strong> Visita al complejo arqueológico de Chan Chan, la ciudadela de adobe más grande de América, y paseo por el balneario de Huanchaco con sus tradicionales caballitos de totora.</li>
+  <li><strong>Día 3:</strong> Recorrido por las Huacas del Sol y de la Luna, templos mochica cercanos a Moche, y visita al complejo arqueológico El Brujo, donde se encuentra la momia de la Señora de Cao.</li>
+  <li><strong>Día 4:</strong> Mañana libre para actividades opcionales y traslado de retorno.</li>
+</ul>
+
+
+      <h2 style="color:#F25C5C;">Lugares que visitarás</h2>
+      <ul>
+        <li>Chan Chan (capital Chimú, Patrimonio de la Humanidad)</li>
+        <li>Huaca del Sol y Huaca de la Luna</li>
+        <li>Centro Histórico de Trujillo (Plaza de Armas, casonas coloniales)</li>
+        <li>Balneario de Huanchaco (caballitos de totora)</li>
+        <li>Complejo El Brujo (momía de la Señora de Cao)</li>
+      </ul>
+
+      <h2 style="color:#F25C5C;">Incluye</h2>
+      <ul>
+        <li>Alojamiento en hotel 3 estrellas en Trujillo o Huanchaco</li>
+        <li>Desayuno diario + menú típicos de la región</li>
+        <li>Guía turístico bilingüe (español/inglés) especializado en culturas Mochica y Chimú</li>
+        <li>Transporte privado para todos los trayectos</li>
+        <li>Entradas a Chan Chan, Huacas del Sol y de la Luna, El Brujo y Museo de la Señora de Cao</li>
+      </ul>
+
+      <h2 style="color:#F25C5C;">Recomendaciones</h2>
+      <ul>
+        <li>Llevar ropa ligera pero también abrigo para la costa al atardecer</li>
+        <li>Usar protector solar, lentes de sol y gorro en Huanchaco y zonas arqueológicas abiertas</li>
+        <li>Calzado cómodo para caminar en sitios de adobe y zonas arqueológicas</li>
+        <li>Llevar cámara o móvil cargado para capturar murales, relieves y paisaje costero</li>
+        <li>Respetar las normas de los sitios arqueológicos y evitar tocar murales o estructuras delicadas</li>
+      </ul>
+
+    </div>
+
+    <div class="col-md-4">
+      <img src="img/Trujillo1.jpg" class="img-fluid rounded mb-4" alt="Chan Chan">
+      <img src="img/Trujillo2.jpg" class="img-fluid rounded mb‑4" alt="Huaca de la Luna">
+      <img src="img/Trujillo3.jpg" class="img-fluid rounded mb‑4" alt="Huanchaco">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Contactos</h4>
+                            <a href="javascript:void(0)"><i class="fas fa-home me-2"></i> Calle 123, Lima, Perú</a>
+                            <a href="javascript:void(0)"><i class="fas fa-envelope me-2"></i> aventuristica@gmail.com</a>
+                            <a href="javascript:void(0)"><i class="fas fa-phone me-2"></i> +51 987 654 321</a>
+                            <a href="javascript:void(0)" class="mb-3"><i class="fas fa-print me-2"></i> +51 998 528 311</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.facebook.com/share/1AHtaxVvJP/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.tiktok.com/@aventuristica7?_r=1&_t=ZS-91A2g56J49X"><i class="fab fa-tiktok fw-normal"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.instagram.com/aven_turistica?igsh=MW53NWgzZWwxZzN1dA=="><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column ms-3-end">
+                            <h4 class="mb-4 text-white">Servicios</h4>
+                            <a href="/about.html"><i class="fas fa-angle-right me-2"></i> Acerca de</a>
+                            <a href="/blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="/packages.html"><i class="fas fa-angle-right me-2"></i> Paquetes</a>
+                            <a href="/tour.html"><i class="fas fa-angle-right me-2"></i> Tour de exploración</a>
+                            <a href="/404.html"><i class="fas fa-angle-right me-2"></i> Restaurante</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Avisos y Políticas</h4>
+                            <a href="/contact.html"><i class="fas fa-angle-right me-2"></i> Contacto</a>
+                            <a href="/PoliticaPrivacidad.html"><i class="fas fa-angle-right me-2"></i> Política de Privacidad</a>
+                            <a href="/TerminosCondiciones.html"><i class="fas fa-angle-right me-2"></i> Términos y Condiciones</a>
+                            <a href="/PolíticaCookies.html"><i class="fas fa-angle-right me-2"></i> Política de Cookies</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">Arabic</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Greek</option>
+                                                <option value="3">New York</option>
+                                            </select>
+                                            <label for="select1">English</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">USD</option>
+                                                <option value="2">EUR</option>
+                                                <option value="3">INR</option>
+                                                <option value="3">GBP</option>
+                                            </select>
+                                            <label for="select1">$</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        <div class="footer-item">
+                            
+                            <h4 class="text-white mb-3">Formas de pago</h4>
+                            <div class="footer-bank-card">
+                                <a href="javascript:void(0)" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="javascript:void(0)" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="javascript:void(0)" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="javascript:void(0)" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="javascript:void(0)" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="javascript:void(0)" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 justify-content-center align-items-center">
+                    <div class="col-md-6 text-center">
+                        <i class="fas fa-copyright me-2"></i>
+                        <a class="text-white" href="#">2025 Aventuristica</a>, Todos los derechos reservados.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
