@@ -1,3 +1,15 @@
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar-nav');
+    if(window.scrollY > 50) {
+        navbar.classList.remove('navbar-top');
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+        navbar.classList.add('navbar-top');
+    }
+});
+
+
 (function ($) {
     "use strict";
 
