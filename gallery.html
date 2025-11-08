@@ -1037,22 +1037,61 @@
         </div>
         <!-- Gallery End -->
 
-        <!-- Subscribe Start -->
-        <div class="container-fluid subscribe py-5">
-            <div class="container text-center py-5">
-                <div class="mx-auto text-center" style="max-width: 900px;">
-                    <h5 class="subscribe-title px-3">Subscribe</h5>
-                    <h1 class="text-white mb-4">Our Newsletter</h1>
-                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
-                    </p>
-                    <div class="position-relative mx-auto">
-                        <input class="form-control color-borde rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+<!-- Statistics with Icons Start -->
+<div class="container-fluid subscribe py-5">
+    <div class="container text-center py-5">
+        <div class="mx-auto text-center" style="max-width: 900px;">
+            <h5 class="subscribe-title px-3">Nuestros Logros</h5>
+            <h1 class="text-white mb-4">Estadísticas Destacadas</h1>
+            <p class="text-white mb-5">Estos números reflejan nuestro esfuerzo y compromiso. Gracias a todos los que hacen posible este proyecto.</p>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="bg-light text-dark p-4 rounded">
+                        <i class="fas fa-users fa-3x mb-3" style="color: #F25C5C;"></i>
+                        <h2 class="counter" data-target="5700">0</h2>
+                        <p>Usuarios satisfechos</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="bg-light text-dark p-4 rounded">
+                        <i class="fas fa-map-marker-alt fa-3x mb-3" style="color: #F25C5C;"></i>
+                        <h2 class="counter" data-target="8000">0</h2>
+                        <p>Destinos recomendados</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="bg-light text-dark p-4 rounded">
+                        <i class="fas fa-check-circle fa-3x mb-3" style="color: #F25C5C;"></i>
+                        <h2 class="counter" data-target="50">0</h2>
+                        <p>Proyectos completados</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Subscribe End -->
+    </div>
+</div>
+<!-- Statistics with Icons End -->
+
+<script>
+// Animación de contadores para todos los números
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200; // velocidad del conteo
+
+        if(count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target.toLocaleString(); // agrega comas automáticamente
+        }
+    };
+    updateCount();
+});
+</script>
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5">
