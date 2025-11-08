@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header('Location: login.html'); 
+    exit;
+}
+
+$nombreUsuario = $_SESSION['usuario'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -92,7 +104,7 @@ header h1 i{ color:var(--main-color); }
   </div>
 
   <div class="icons">
-    <button class="logout-btn">Cerrar sesión</button>
+    <button class="logout-btn" onclick="window.location.href='logout.php'">Cerrar sesión</button>
     <div class="notification" id="notiBtn"><i class="fa-regular fa-bell"></i>
       <div class="dropdown" id="notiDropdown"></div>
     </div>
@@ -108,7 +120,7 @@ header h1 i{ color:var(--main-color); }
 <section class="profile-info">
   <img src="perfil.jpg" alt="Foto de perfil">
   <div class="profile-details">
-    <h3>Olivia Rhye</h3>
+    <h3><?php echo htmlspecialchars($nombreUsuario); ?></h3>
     <p>Viajera apasionada y exploradora de culturas</p>
     <p><i class="fa-solid fa-location-dot"></i> Lima, Perú</p>
 
