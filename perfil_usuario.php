@@ -96,9 +96,9 @@ header h1 i{ color:var(--main-color); }
     </div>
     <h1><i class="fa-solid fa-location-dot"></i> Aventurística</h1>
     <nav class="menu">
-      <a href="#">Contáctanos</a>
-      <a href="#">Guías</a>
-      <a href="#">Servicios</a>
+      <a href="/contact.html">Contáctanos</a>
+      <a href="/Guides.html">Guías</a>
+      <a href="/services.html">Servicios</a>
       <a href="#">APP</a>
     </nav>
   </div>
