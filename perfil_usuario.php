@@ -54,7 +54,7 @@ header h1 i{ color:var(--main-color); }
 @keyframes colorShift{ 0%{background-position:0% 50%;}100%{background-position:100% 50%;} }
 
 /* Cover y Perfil */
-.cover-photo{ width:100%; height:300px; background:url('perfil4.jpg') center/cover no-repeat; }
+.cover-photo{ width:100%; height:300px; background:url('/img/perfil4.jpg') center/cover no-repeat; }
 .profile-info{ background:#fff; padding:80px 80px 30px; display:flex; align-items:center; gap:60px; box-shadow:0 3px 8px rgba(0,0,0,0.05); margin-top:-10px; border-radius:20px; position:relative; }
 .profile-info img{ width:150px; height:150px; border-radius:50%; object-fit:cover; border:5px solid #0c42c1; position:absolute; top:-75px; left:60px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
 .profile-buttons{ margin-top:15px; display:flex; gap:15px; }
@@ -118,7 +118,7 @@ header h1 i{ color:var(--main-color); }
 <section class="cover-photo"></section>
 
 <section class="profile-info">
-  <img src="perfil.jpg" alt="Foto de perfil">
+  <img src="/img/perfil.jpg" alt="Foto de perfil">
   <div class="profile-details">
     <h3><?php echo htmlspecialchars($nombreUsuario); ?></h3>
     <p>Viajera apasionada y exploradora de culturas</p>
